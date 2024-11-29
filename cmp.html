@@ -324,42 +324,28 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            border-radius: 50%;
-        }
-        .clock-times__second, .clock-times__minute, .clock-times__hour {
-            position: absolute;
-            left: calc(50% - 10px);
-            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-            background: #f4eed7;
-            transform-origin: bottom center;
-            top: 5px;
-            z-index: 2;
-            /*border-radius: 1px;*/
+            /*border: solid 1px yellow;*/
         }
         .clock-times__second {
-            height: 90px;
-            margin-top: 10px;
-            animation: time 2s linear infinite;
-            z-index: 3;
-            background-image: linear-gradient(to top, #e45753 0%, #ca09e8 100%);
+            position: absolute;
+
             width: 20px;
-            /*border-radius: 50px;*/
-        }
-        .clock-times__minute {
-            height: 80px;
-            margin-top: 20px;
-            opacity: 0.75;
-            animation: time 20s linear infinite;
-            animation-delay: -35s;
-        }
-        .clock-times__hour {
-            height: 70px;
-            margin-top: 30px;
-            width: 5px;
-            border-radius: 50px;
-            box-shadow: 3px 1px 6px -1px rgba(10, 21, 53, 0.45);
-            animation: time 60s linear infinite;
-            animation-delay: -20s;
+            height: 100px;
+
+            left: calc(50% - 10px);
+            top: calc(50% - 90px);
+            /*90 = 110 - 20*/
+
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+
+            /*transform-origin: bottom center;*/
+            transform-origin: 10px 90px;
+
+            z-index: 2;
+            background-image: linear-gradient(to top, #e45753 0%, #ca09e8 100%);
+
+            animation: time 2s linear infinite;
+
         }
 
         @keyframes time {
