@@ -1,8 +1,12 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
+import Compass from './components/Compass.vue'
 </script>
 
 <template>
-  <div class="text-red-500">preved</div>
+  <!--<Compass></Compass>-->
+  <div class="bg-black h-full">
+  <img src="./assets/compass.jpg">
+  </div>
 </template>
 
