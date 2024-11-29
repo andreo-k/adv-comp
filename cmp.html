@@ -24,10 +24,24 @@
         .compass {
             width: 1em;
             height: 1em;
-            font-size: 400px;
+            font-size: 300px;
             border-radius: 50%;
             position: relative;
         }
+
+        @media (min-width: 601px) and (min-height: 601px) {
+            .compass {
+                font-size: 500px;
+            }
+        }
+
+        @media (min-width: 1024px) and (min-height: 1024px) {
+            .compass {
+                font-size: 700px;
+            }
+        }
+
+
         .compass-circles {
             width: 100%;
             height: 100%;
@@ -266,8 +280,6 @@
     </style>
 </head>
 <body>
-
-<div class="oak-leaf"></div>
 
 <div class="wrapper">
     <div class="compass">
