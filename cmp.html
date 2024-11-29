@@ -21,20 +21,20 @@
             background: #f3fbff;
         }
 
-        .clock {
-            width: 300px;
-            height: 300px;
+        .compass {
+            width: 1em;
+            height: 1em;
+            font-size: 300px;
             border-radius: 50%;
             position: relative;
         }
-        .clock-circles {
+        .compass-circles {
             width: 100%;
             height: 100%;
             border-radius: 50%;
             position: relative;
-            font-size: 300px;
         }
-        .clock-circles__item {
+        .compass-circles__item {
             border-radius: 50%;
             position: absolute;
             left: 50%;
@@ -43,27 +43,124 @@
             width: 1em;
             height: 1em;
         }
-        .clock-circles__item:nth-child(1) {
+        .compass-circles__item:nth-child(1) {
             background-image: linear-gradient(to bottom, #00c0ff, #ffcf00, #fc4f4f, #0e22c3);
             box-shadow: 0px 30px 40px 0px rgba(72, 30, 202, 0.2);
             font-size: 100%;
         }
-        .clock-circles__item:nth-child(2) {
+        .compass-circles__item:nth-child(2) {
             background-image: linear-gradient(to bottom, #027fff, #491bc9);
             font-size: 95%;
             box-shadow: 0px 10px 20px 0px rgba(42, 17, 121, 0.5);
         }
-        .clock-circles__item:nth-child(3) {
+        .compass-circles__item:nth-child(3) {
             font-size: 60%;
             box-shadow: inset 0px 20px 40px rgba(0, 0, 0, 0.1), inset 0px 0px 40px rgba(37, 13, 105, 0.55), 0px 5px 0px #5430ff, 0px -1px 0px 3px rgba(14, 29, 169, 0.35);
         }
-        .clock-circles__item:nth-child(4) {
+        .compass-circles__item:nth-child(4) {
             background: #3349c9;
             font-size: 35px;
             box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.2), inset 0px 0px 20px 1px rgba(54, 21, 148, 0.3);
         }
 
-        .clock-indicators {
+        .compass-flags {
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            /*border: solid 1px yellow;*/
+        }
+
+        .compass-flags__item {
+            position: absolute;
+
+            left: calc(50% - 15px) ;
+            top: -10px;
+            width: 0.1em;
+            height: 0.05em;
+
+            -webkit-transform-origin: center;
+            transform-origin: center 130px;
+
+            z-index: 2;
+            background: red;
+        }
+        .compass-flags__item:nth-of-type(2) {
+            transform: rotateZ(calc(15deg * 1));
+        }
+        .compass-flags__item:nth-of-type(3) {
+            transform: rotateZ(calc(15deg * 2));
+        }
+        .compass-flags__item:nth-of-type(4) {
+            transform: rotateZ(calc(15deg * 3));
+        }
+        .compass-flags__item:nth-of-type(5) {
+            transform: rotateZ(calc(15deg * 4));
+        }
+        .compass-flags__item:nth-of-type(6) {
+            transform: rotateZ(calc(15deg * 5));
+        }
+        .compass-flags__item:nth-of-type(7) {
+            transform: rotateZ(calc(15deg * 6));
+        }
+        .compass-flags__item:nth-of-type(8) {
+            transform: rotateZ(calc(15deg * 7));
+        }
+        .compass-flags__item:nth-of-type(9) {
+            transform: rotateZ(calc(15deg * 8));
+        }
+        .compass-flags__item:nth-of-type(10) {
+            transform: rotateZ(calc(15deg * 9));
+        }
+        .compass-flags__item:nth-of-type(11) {
+            transform: rotateZ(calc(15deg * 10));
+        }
+        .compass-flags__item:nth-of-type(12) {
+            transform: rotateZ(calc(15deg * 11));
+        }
+        .compass-flags__item:nth-of-type(13) {
+            transform: rotateZ(calc(15deg * 12));
+        }
+        .compass-flags__item:nth-of-type(14) {
+            transform: rotateZ(calc(15deg * 13));
+        }
+        .compass-flags__item:nth-of-type(15) {
+            transform: rotateZ(calc(15deg * 14));
+        }
+        .compass-flags__item:nth-of-type(16) {
+            transform: rotateZ(calc(15deg * 15));
+        }
+        .compass-flags__item:nth-of-type(17) {
+            transform: rotateZ(calc(15deg * 16));
+        }
+        .compass-flags__item:nth-of-type(18) {
+            transform: rotateZ(calc(15deg * 17));
+        }
+        .compass-flags__item:nth-of-type(19) {
+            transform: rotateZ(calc(15deg * 18));
+        }
+        .compass-flags__item:nth-of-type(20) {
+            transform: rotateZ(calc(15deg * 19));
+        }
+        .compass-flags__item:nth-of-type(21) {
+            transform: rotateZ(calc(15deg * 20));
+        }
+        .compass-flags__item:nth-of-type(22) {
+            transform: rotateZ(calc(15deg * 21));
+        }
+        .compass-flags__item:nth-of-type(23) {
+            transform: rotateZ(calc(15deg * 22));
+        }
+        .compass-flags__item:nth-of-type(24) {
+            transform: rotateZ(calc(15deg * 23));
+        }
+
+
+        .compass-indicators {
             position: absolute;
             width: 60%;
             height: 60%;
@@ -74,7 +171,7 @@
             border-radius: 50%;
             /*border: solid 1px yellow;*/
         }
-        .clock-indicators__item {
+        .compass-indicators__item {
             position: absolute;
 
             left: calc(50% - 1px) ;
@@ -82,18 +179,14 @@
             width: 2px;
             height: 96%;
 
-            /*border: solid 1px red;*/
-
             -webkit-transform-origin: center center;
             transform-origin: center center;
 
             z-index: 2;
             border-radius: 1px;
             background: none;
-
-            /*opacity: 0.5;*/
         }
-        .clock-indicators__item:after {
+        .compass-indicators__item:after {
             content: "";
             position: absolute;
             width: 2px;
@@ -103,33 +196,33 @@
             top: 0;
             border-radius: 10px;
         }
-        .clock-indicators__item:nth-child(1), .clock-indicators__item:nth-child(3), .clock-indicators__item:nth-child(5), .clock-indicators__item:nth-child(7) {
+        .compass-indicators__item:nth-child(1), .compass-indicators__item:nth-child(3), .compass-indicators__item:nth-child(5), .compass-indicators__item:nth-child(7) {
             width: 8px;
             left: calc(50% - 4px) ;
         }
-        .clock-indicators__item:nth-child(1):after, .clock-indicators__item:nth-child(3):after, .clock-indicators__item:nth-child(5):after, .clock-indicators__item:nth-child(7):after {
+        .compass-indicators__item:nth-child(1):after, .compass-indicators__item:nth-child(3):after, .compass-indicators__item:nth-child(5):after, .compass-indicators__item:nth-child(7):after {
             height: 10px;
             width: 6px;
         }
-        .clock-indicators__item:nth-of-type(2) {
+        .compass-indicators__item:nth-of-type(2) {
             transform: rotateZ(calc(45deg * 1));
         }
-        .clock-indicators__item:nth-of-type(3) {
+        .compass-indicators__item:nth-of-type(3) {
             transform: rotateZ(calc(45deg * 2));
         }
-        .clock-indicators__item:nth-of-type(4) {
+        .compass-indicators__item:nth-of-type(4) {
             transform: rotateZ(calc(45deg * 3));
         }
-        .clock-indicators__item:nth-of-type(5) {
+        .compass-indicators__item:nth-of-type(5) {
             transform: rotateZ(calc(45deg * 4));
         }
-        .clock-indicators__item:nth-of-type(6) {
+        .compass-indicators__item:nth-of-type(6) {
             transform: rotateZ(calc(45deg * 5));
         }
-        .clock-indicators__item:nth-of-type(7) {
+        .compass-indicators__item:nth-of-type(7) {
             transform: rotateZ(calc(45deg * 6));
         }
-        .clock-indicators__item:nth-of-type(8) {
+        .compass-indicators__item:nth-of-type(8) {
             transform: rotateZ(calc(45deg * 7));
         }
 
@@ -169,38 +262,60 @@
                 transform: rotateZ(360deg);
             }
         }
+
     </style>
 </head>
 <body>
 
+<div class="oak-leaf"></div>
+
 <div class="wrapper">
-    <div class="clock">
-        <div class="clock-circles">
-            <div class="clock-circles__item"></div>
-            <div class="clock-circles__item"></div>
-            <div class="clock-circles__item"></div>
-            <div class="clock-circles__item">
-                <!--<div class="wave"></div>-->
-                <!--<div class="wave"></div>-->
-                <!--<div class="wave"></div>-->
-                <!--<div class="wave"></div>-->
-                <!--<div class="wave"></div>-->
+    <div class="compass">
+        <div class="compass-circles">
+            <div class="compass-circles__item"></div>
+            <div class="compass-circles__item"></div>
+            <div class="compass-circles__item"></div>
+            <div class="compass-circles__item">
             </div>
         </div>
-        <div class="clock-indicators">
-            <div class="clock-indicators__item"></div>
-            <div class="clock-indicators__item"></div>
-            <div class="clock-indicators__item"></div>
-            <div class="clock-indicators__item"></div>
-            <div class="clock-indicators__item"></div>
-            <div class="clock-indicators__item"></div>
-            <div class="clock-indicators__item"></div>
-            <div class="clock-indicators__item"></div>
+        <div class="compass-indicators">
+            <div class="compass-indicators__item"></div>
+            <div class="compass-indicators__item"></div>
+            <div class="compass-indicators__item"></div>
+            <div class="compass-indicators__item"></div>
+            <div class="compass-indicators__item"></div>
+            <div class="compass-indicators__item"></div>
+            <div class="compass-indicators__item"></div>
+            <div class="compass-indicators__item"></div>
+        </div>
+        <div class="compass-flags">
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
+            <div class="compass-flags__item"></div>
         </div>
         <div class="arrow_wrapper">
             <div class="compass_arrow"></div>
-            <!--<div class="clock-times__minute"></div>-->
-            <!--<div class="clock-times__hour"></div>-->
         </div>
     </div>
 </div>
