@@ -8,6 +8,10 @@
             box-sizing: border-box;
         }
 
+        body {
+            overflow: hidden;
+        }
+
         .wrapper {
             width: 100%;
             height: 100vh;
@@ -324,13 +328,13 @@
         }
         .clock-times__second, .clock-times__minute, .clock-times__hour {
             position: absolute;
-            left: calc(50% - 1px);
-            width: 2px;
+            left: calc(50% - 10px);
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
             background: #f4eed7;
             transform-origin: bottom center;
             top: 5px;
             z-index: 2;
-            border-radius: 1px;
+            /*border-radius: 1px;*/
         }
         .clock-times__second {
             height: 90px;
@@ -338,8 +342,8 @@
             animation: time 2s linear infinite;
             z-index: 3;
             background-image: linear-gradient(to top, #e45753 0%, #ca09e8 100%);
-            width: 3px;
-            border-radius: 50px;
+            width: 20px;
+            /*border-radius: 50px;*/
         }
         .clock-times__minute {
             height: 80px;
@@ -391,11 +395,11 @@
             <div class="clock-indicators__item"></div>
             <div class="clock-indicators__item"></div>
         </div>
-        <!--<div class="clock-times">-->
-            <!--<div class="clock-times__second"></div>-->
+        <div class="clock-times">
+            <div class="clock-times__second"></div>
             <!--<div class="clock-times__minute"></div>-->
             <!--<div class="clock-times__hour"></div>-->
-        <!--</div>-->
+        </div>
     </div>
 </div>
 </div>
