@@ -317,7 +317,7 @@
             transform: rotateZ(calc(45deg * 60));
         }
 
-        .clock-times {
+        .arrow_wrapper {
             position: absolute;
             width: 70%;
             height: 70%;
@@ -326,7 +326,7 @@
             transform: translate(-50%, -50%);
             /*border: solid 1px yellow;*/
         }
-        .clock-times__second {
+        .compass_arrow {
             position: absolute;
 
             width: 20px;
@@ -380,9 +380,10 @@
             <div class="clock-indicators__item"></div>
             <div class="clock-indicators__item"></div>
             <div class="clock-indicators__item"></div>
+
         </div>
-        <div class="clock-times">
-            <div class="clock-times__second"></div>
+        <div class="arrow_wrapper">
+            <div class="compass_arrow"></div>
             <!--<div class="clock-times__minute"></div>-->
             <!--<div class="clock-times__hour"></div>-->
         </div>
