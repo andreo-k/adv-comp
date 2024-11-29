@@ -1,4 +1,10 @@
-<script></script>
+<script setup>
+    import { US } from 'country-flag-icons/string/3x2'
+
+
+
+
+</script>
 
 <template>
     <div class="wrapper">
@@ -21,6 +27,10 @@
                 <div class="compass-indicators__item"></div>
             </div>
             <div class="compass-flags">
+                <div class="compass-flags__item">
+                    <!--<div v-html="US"></div>-->
+                    <!--<img :src="US">-->
+                </div>
                 <div class="compass-flags__item"></div>
                 <div class="compass-flags__item"></div>
                 <div class="compass-flags__item"></div>
@@ -37,8 +47,7 @@
                 <div class="compass-flags__item"></div>
                 <div class="compass-flags__item"></div>
                 <div class="compass-flags__item"></div>
-                <div class="compass-flags__item"></div>
-                <div class="compass-flags__item"></div>
+                <div class="compass-flags__item "></div>
                 <div class="compass-flags__item"></div>
                 <div class="compass-flags__item"></div>
                 <div class="compass-flags__item"></div>
