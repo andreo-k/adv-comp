@@ -1,35 +1,165 @@
 <script setup>
-    import { ref, onMounted, onBeforeUnmount } from 'vue'
+    import {ref, onMounted, onBeforeUnmount} from 'vue'
     import moment from "moment";
     import _ from 'lodash';
 
-    import { US } from 'country-flag-icons/string/3x2'
-    import { TZ } from 'country-flag-icons/string/3x2'
-    import { AC } from 'country-flag-icons/string/3x2'
-    import { AD } from 'country-flag-icons/string/3x2'
-    import { AE } from 'country-flag-icons/string/3x2'
-    import { AF } from 'country-flag-icons/string/3x2'
-    import { AG } from 'country-flag-icons/string/3x2'
-    import { AI } from 'country-flag-icons/string/3x2'
-    import { AL } from 'country-flag-icons/string/3x2'
-    import { AM } from 'country-flag-icons/string/3x2'
-    import { AO } from 'country-flag-icons/string/3x2'
-    import { AQ } from 'country-flag-icons/string/3x2'
-    import { AR } from 'country-flag-icons/string/3x2'
-    import { AS } from 'country-flag-icons/string/3x2'
-    import { AT } from 'country-flag-icons/string/3x2'
-    import { AU } from 'country-flag-icons/string/3x2'
-    import { AW } from 'country-flag-icons/string/3x2'
-    import { AX } from 'country-flag-icons/string/3x2'
-    import { AZ } from 'country-flag-icons/string/3x2'
-    import { BA } from 'country-flag-icons/string/3x2'
-    import { BB } from 'country-flag-icons/string/3x2'
-    import { BD } from 'country-flag-icons/string/3x2'
-    import { BE } from 'country-flag-icons/string/3x2'
-    import { BF } from 'country-flag-icons/string/3x2'
+    import {US} from 'country-flag-icons/string/3x2'
+    import {RS} from 'country-flag-icons/string/3x2'
 
+    let days = [ // 24 days
+        {
+            flag: US,
+            day: 9,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+        {
+            flag: US,
+            day: 8,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+        {
+            flag: US,
+            day: 13,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+        {
+            flag: US,
+            day: 18,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+        {
+            flag: US,
+            day: 24,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+        {
+            flag: US,
+            day: 22,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+        {
+            flag: US,
+            day: 14,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+        {
+            flag: RS,
+            day: 1,
+            done: false,
+            welcomeUrl:   'https://drive.google.com/file/d/1zBCjg7Fz0jRN2Q_bVeFxPyZOqigdQxzK/view',
+            endOfTaskUrl: 'https://drive.google.com/file/d/1RwnrXUjjE5rEwnhaNr_KFTiRcFvT5ppb/view',
+            symbolUrl: 'https://iili.io/20vj4na.png'
+        },
+        {
+            flag: US,
+            day: 5,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+        {
+            flag: US,
+            day: 19,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+        {
+            flag: US,
+            day: 2,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+        {
+            flag: US,
+            day: 20,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+        {
+            flag: US,
+            day: 10,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+        {
+            flag: US,
+            day: 15,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+        {
+            flag: US,
+            day: 7,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+        {
+            flag: US,
+            day: 16,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+        {
+            flag: US,
+            day: 11,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+        {
+            flag: US,
+            day: 3,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+        {
+            flag: US,
+            day: 6,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+        {
+            flag: US,
+            day: 21,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+        {
+            flag: US,
+            day: 17,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+        {
+            flag: US,
+            day: 4,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+        {
+            flag: US,
+            day: 12,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+        {
+            flag: US,
+            day: 23,
+            done: false,
+            url: 'https://www.yandex.ru'
+        },
+
+
+    ]
 
     let rotation = ref(0);
+
+    let permissionButton = ref(false);
 
     const handleOrientation = (event) => {
         if (typeof event.alpha === 'number') {
@@ -37,12 +167,44 @@
         }
     };
 
-    onMounted(() => {
-        if (window.DeviceOrientationEvent) {
+
+    const requestPermission = async () => {
+        try {
+            const permission = await DeviceOrientationEvent.requestPermission();
+            if (permission != 'granted') {
+                alert('Permission denied. Unable to access compass.');
+                return;
+            }
+
+            permissionButton.value = false;
+
             window.addEventListener('deviceorientation', handleOrientation);
-        } else {
-            alert('Device orientation not supported on your device');
+        } catch (error) {
+            console.error('Permission request failed', error);
         }
+    };
+
+    const clickDay = (day) => {
+        window.open(day.done ? day.endOfTaskUrl : day.welcomeUrl, '_blank');
+    }
+
+
+    onMounted(async () => {
+        if (!window.DeviceOrientationEvent) {
+            alert('Device orientation not supported on your device');
+            return;
+        }
+
+        if (typeof DeviceOrientationEvent.requestPermission == 'function') {
+            permissionButton.value = true;
+            return;
+        }
+
+        window.addEventListener('deviceorientation', handleOrientation);
+
+        // setInterval(() => {
+        //     rotation.value = (rotation.value + 1) % 360;
+        // }, 20)
     });
 
     onBeforeUnmount(() => {
@@ -52,7 +214,12 @@
 </script>
 
 <template>
-    <div class="wrapper">
+
+    <button class="bg-blue-500 text-white py-2 px-4 rounded" v-if="permissionButton" @click="requestPermission()">
+        Enable Compass
+    </button>
+    <div v-else class="wrapper">
+
         <div class="compass">
             <div class="compass-circles">
                 <div class="compass-circles__item"></div>
@@ -72,44 +239,15 @@
                 <div class="compass-indicators__item"></div>
             </div>
             <div class="compass-flags">
-                <div class="compass-flags__item">
-                    <div v-html="US"></div>
+
+                <div v-for="(day, idx) of days" class="compass-flags__item">
+                    <div v-if="day.done || day.day == moment().date() && rotation > idx * 360 / 24 && rotation < (idx + 1) * 360 / 24"
+                         @click="clickDay(day)"
+                         v-html="day.flag"
+                    ></div>
+                    <span v-else class="text-[0.05em] absolute bottom-0 left-[0.8em]">?</span>
                 </div>
-                <div class="compass-flags__item">
-                    <div v-html="TZ"></div>
-                </div>
-                <div class="compass-flags__item">
-                    <span class="text-[0.05em] absolute bottom-0 left-[0.8em]">?</span>
-                </div>
-                <div class="compass-flags__item">
-                    <span class="text-[0.05em] absolute bottom-0 left-[0.8em]">?</span>
-                </div>
-                <div class="compass-flags__item">
-                    <span class="text-[0.05em] absolute bottom-0 left-[0.8em]">?</span>
-                </div>
-                <div class="compass-flags__item"></div>
-                <div class="compass-flags__item"></div>
-                <div class="compass-flags__item"></div>
-                <div class="compass-flags__item"></div>
-                <div class="compass-flags__item"></div>
-                <div class="compass-flags__item"></div>
-                <div class="compass-flags__item"></div>
-                <div class="compass-flags__item">
-                    <span class="text-[0.05em] absolute bottom-0 left-[0.8em]">?</span>
-                </div>
-                <div class="compass-flags__item">
-                    <div v-html="BF"></div>
-                </div>
-                <div class="compass-flags__item"></div>
-                <div class="compass-flags__item"></div>
-                <div class="compass-flags__item"></div>
-                <div class="compass-flags__item "></div>
-                <div class="compass-flags__item"></div>
-                <div class="compass-flags__item"></div>
-                <div class="compass-flags__item"></div>
-                <div class="compass-flags__item"></div>
-                <div class="compass-flags__item"></div>
-                <div class="compass-flags__item"></div>
+
             </div>
             <div class="arrow_wrapper">
                 <div class="compass_arrow"
@@ -157,6 +295,7 @@
         border-radius: 50%;
         position: relative;
     }
+
     .compass-circles__item {
         border-radius: 50%;
         position: absolute;
@@ -166,20 +305,24 @@
         width: 1em;
         height: 1em;
     }
+
     .compass-circles__item:nth-child(1) {
         background-image: linear-gradient(to bottom, #00c0ff, #ffcf00, #fc4f4f, #0e22c3);
         box-shadow: 0px 30px 40px 0px rgba(72, 30, 202, 0.2);
         font-size: 100%;
     }
+
     .compass-circles__item:nth-child(2) {
         background-image: linear-gradient(to bottom, #027fff, #491bc9);
         font-size: 95%;
         box-shadow: 0px 10px 20px 0px rgba(42, 17, 121, 0.5);
     }
+
     .compass-circles__item:nth-child(3) {
         font-size: 60%;
         box-shadow: inset 0px 20px 40px rgba(0, 0, 0, 0.1), inset 0px 0px 40px rgba(37, 13, 105, 0.55), 0px 5px 0px #5430ff, 0px -1px 0px 3px rgba(14, 29, 169, 0.35);
     }
+
     .compass-circles__item:nth-child(4) {
         background: #3349c9;
         font-size: 35px;
@@ -201,7 +344,7 @@
     .compass-flags__item {
         position: absolute;
 
-        left: calc(50% - 0.05em) ;
+        left: calc(50% - 0.05em);
         top: -10px;
         width: 0.1em;
         height: 0.066em;
@@ -216,69 +359,91 @@
     .compass-flags__item:nth-of-type(2) {
         transform: rotateZ(calc(15deg * 1));
     }
+
     .compass-flags__item:nth-of-type(3) {
         transform: rotateZ(calc(15deg * 2));
     }
+
     .compass-flags__item:nth-of-type(4) {
         transform: rotateZ(calc(15deg * 3));
     }
+
     .compass-flags__item:nth-of-type(5) {
         transform: rotateZ(calc(15deg * 4));
     }
+
     .compass-flags__item:nth-of-type(6) {
         transform: rotateZ(calc(15deg * 5));
     }
+
     .compass-flags__item:nth-of-type(7) {
         transform: rotateZ(calc(15deg * 6));
     }
+
     .compass-flags__item:nth-of-type(8) {
         transform: rotateZ(calc(15deg * 7));
     }
+
     .compass-flags__item:nth-of-type(9) {
         transform: rotateZ(calc(15deg * 8));
     }
+
     .compass-flags__item:nth-of-type(10) {
         transform: rotateZ(calc(15deg * 9));
     }
+
     .compass-flags__item:nth-of-type(11) {
         transform: rotateZ(calc(15deg * 10));
     }
+
     .compass-flags__item:nth-of-type(12) {
         transform: rotateZ(calc(15deg * 11));
     }
+
     .compass-flags__item:nth-of-type(13) {
         transform: rotateZ(calc(15deg * 12));
     }
+
     .compass-flags__item:nth-of-type(14) {
         transform: rotateZ(calc(15deg * 13));
     }
+
     .compass-flags__item:nth-of-type(15) {
         transform: rotateZ(calc(15deg * 14));
     }
+
     .compass-flags__item:nth-of-type(16) {
         transform: rotateZ(calc(15deg * 15));
     }
+
     .compass-flags__item:nth-of-type(17) {
         transform: rotateZ(calc(15deg * 16));
     }
+
     .compass-flags__item:nth-of-type(18) {
         transform: rotateZ(calc(15deg * 17));
     }
+
     .compass-flags__item:nth-of-type(19) {
         transform: rotateZ(calc(15deg * 18));
     }
+
     .compass-flags__item:nth-of-type(20) {
         transform: rotateZ(calc(15deg * 19));
     }
+
     .compass-flags__item:nth-of-type(21) {
         transform: rotateZ(calc(15deg * 20));
     }
+
     .compass-flags__item:nth-of-type(22) {
         transform: rotateZ(calc(15deg * 21));
     }
+
     .compass-flags__item:nth-of-type(23) {
         transform: rotateZ(calc(15deg * 22));
     }
+
     .compass-flags__item:nth-of-type(24) {
         transform: rotateZ(calc(15deg * 23));
     }
@@ -294,10 +459,11 @@
         border-radius: 50%;
         /*border: solid 1px yellow;*/
     }
+
     .compass-indicators__item {
         position: absolute;
 
-        left: calc(50% - 1px) ;
+        left: calc(50% - 1px);
         top: 2%;
         width: 2px;
         height: 96%;
@@ -309,6 +475,7 @@
         border-radius: 1px;
         background: none;
     }
+
     .compass-indicators__item:after {
         content: "";
         position: absolute;
@@ -319,32 +486,41 @@
         top: 0;
         border-radius: 10px;
     }
+
     .compass-indicators__item:nth-child(1), .compass-indicators__item:nth-child(3), .compass-indicators__item:nth-child(5), .compass-indicators__item:nth-child(7) {
         width: 8px;
-        left: calc(50% - 4px) ;
+        left: calc(50% - 4px);
     }
+
     .compass-indicators__item:nth-child(1):after, .compass-indicators__item:nth-child(3):after, .compass-indicators__item:nth-child(5):after, .compass-indicators__item:nth-child(7):after {
         height: 10px;
         width: 6px;
     }
+
     .compass-indicators__item:nth-of-type(2) {
         transform: rotateZ(calc(45deg * 1));
     }
+
     .compass-indicators__item:nth-of-type(3) {
         transform: rotateZ(calc(45deg * 2));
     }
+
     .compass-indicators__item:nth-of-type(4) {
         transform: rotateZ(calc(45deg * 3));
     }
+
     .compass-indicators__item:nth-of-type(5) {
         transform: rotateZ(calc(45deg * 4));
     }
+
     .compass-indicators__item:nth-of-type(6) {
         transform: rotateZ(calc(45deg * 5));
     }
+
     .compass-indicators__item:nth-of-type(7) {
         transform: rotateZ(calc(45deg * 6));
     }
+
     .compass-indicators__item:nth-of-type(8) {
         transform: rotateZ(calc(45deg * 7));
     }
@@ -358,6 +534,7 @@
         transform: translate(-50%, -50%);
         /*border: solid 1px yellow;*/
     }
+
     .compass_arrow {
         position: absolute;
 
