@@ -1,7 +1,33 @@
 <script setup>
     import { ref, onMounted, onBeforeUnmount } from 'vue'
+    import moment from "moment";
+    import _ from 'lodash';
+
     import { US } from 'country-flag-icons/string/3x2'
     import { TZ } from 'country-flag-icons/string/3x2'
+    import { AC } from 'country-flag-icons/string/3x2'
+    import { AD } from 'country-flag-icons/string/3x2'
+    import { AE } from 'country-flag-icons/string/3x2'
+    import { AF } from 'country-flag-icons/string/3x2'
+    import { AG } from 'country-flag-icons/string/3x2'
+    import { AI } from 'country-flag-icons/string/3x2'
+    import { AL } from 'country-flag-icons/string/3x2'
+    import { AM } from 'country-flag-icons/string/3x2'
+    import { AO } from 'country-flag-icons/string/3x2'
+    import { AQ } from 'country-flag-icons/string/3x2'
+    import { AR } from 'country-flag-icons/string/3x2'
+    import { AS } from 'country-flag-icons/string/3x2'
+    import { AT } from 'country-flag-icons/string/3x2'
+    import { AU } from 'country-flag-icons/string/3x2'
+    import { AW } from 'country-flag-icons/string/3x2'
+    import { AX } from 'country-flag-icons/string/3x2'
+    import { AZ } from 'country-flag-icons/string/3x2'
+    import { BA } from 'country-flag-icons/string/3x2'
+    import { BB } from 'country-flag-icons/string/3x2'
+    import { BD } from 'country-flag-icons/string/3x2'
+    import { BE } from 'country-flag-icons/string/3x2'
+    import { BF } from 'country-flag-icons/string/3x2'
+
 
     let rotation = ref(0);
 
@@ -71,7 +97,9 @@
                 <div class="compass-flags__item">
                     <span class="text-[0.05em] absolute bottom-0 left-[0.8em]">?</span>
                 </div>
-                <div class="compass-flags__item"></div>
+                <div class="compass-flags__item">
+                    <div v-html="BF"></div>
+                </div>
                 <div class="compass-flags__item"></div>
                 <div class="compass-flags__item"></div>
                 <div class="compass-flags__item"></div>
