@@ -1,5 +1,7 @@
 <script setup>
     import { US } from 'country-flag-icons/string/3x2'
+    import { TZ } from 'country-flag-icons/string/3x2'
+
 
 
 
@@ -28,8 +30,19 @@
             </div>
             <div class="compass-flags">
                 <div class="compass-flags__item">
-                    <!--<div v-html="US"></div>-->
-                    <!--<img :src="US">-->
+                    <div v-html="US"></div>
+                </div>
+                <div class="compass-flags__item">
+                    <div v-html="TZ"></div>
+                </div>
+                <div class="compass-flags__item">
+                    <span class="text-[0.05em] absolute bottom-0 left-[0.8em]">?</span>
+                </div>
+                <div class="compass-flags__item">
+                    <span class="text-[0.05em] absolute bottom-0 left-[0.8em]">?</span>
+                </div>
+                <div class="compass-flags__item">
+                    <span class="text-[0.05em] absolute bottom-0 left-[0.8em]">?</span>
                 </div>
                 <div class="compass-flags__item"></div>
                 <div class="compass-flags__item"></div>
@@ -38,11 +51,9 @@
                 <div class="compass-flags__item"></div>
                 <div class="compass-flags__item"></div>
                 <div class="compass-flags__item"></div>
-                <div class="compass-flags__item"></div>
-                <div class="compass-flags__item"></div>
-                <div class="compass-flags__item"></div>
-                <div class="compass-flags__item"></div>
-                <div class="compass-flags__item"></div>
+                <div class="compass-flags__item">
+                    <span class="text-[0.05em] absolute bottom-0 left-[0.8em]">?</span>
+                </div>
                 <div class="compass-flags__item"></div>
                 <div class="compass-flags__item"></div>
                 <div class="compass-flags__item"></div>
@@ -146,14 +157,15 @@
         left: calc(50% - 0.05em) ;
         top: -10px;
         width: 0.1em;
-        height: 0.05em;
+        height: 0.066em;
 
         -webkit-transform-origin: center;
         transform-origin: center 0.43em;
 
         z-index: 2;
-        background: red;
+        background: green;
     }
+
     .compass-flags__item:nth-of-type(2) {
         transform: rotateZ(calc(15deg * 1));
     }
@@ -317,7 +329,7 @@
         z-index: 2;
         background-image: linear-gradient(to top, #e45753 0%, #ca09e8 100%);
 
-        animation: time 2s linear infinite;
+        /*animation: time 2s linear infinite;*/
 
     }
 
