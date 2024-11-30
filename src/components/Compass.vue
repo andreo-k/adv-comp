@@ -1,10 +1,27 @@
 <script setup>
+    import { ref, onMounted, onBeforeUnmount } from 'vue'
     import { US } from 'country-flag-icons/string/3x2'
     import { TZ } from 'country-flag-icons/string/3x2'
 
+    let rotation = ref(0);
 
+    const handleOrientation = (event) => {
+        if (typeof event.alpha === 'number') {
+            rotation.value = event.alpha;
+        }
+    };
 
+    onMounted(() => {
+        if (window.DeviceOrientationEvent) {
+            window.addEventListener('deviceorientation', handleOrientation);
+        } else {
+            alert('Device orientation not supported on your device');
+        }
+    });
 
+    onBeforeUnmount(() => {
+        window.removeEventListener('deviceorientation', handleOrientation);
+    });
 
 </script>
 
@@ -67,7 +84,9 @@
                 <div class="compass-flags__item"></div>
             </div>
             <div class="arrow_wrapper">
-                <div class="compass_arrow"></div>
+                <div class="compass_arrow"
+                     :style="{ transform: `rotateZ(${rotation}deg)` }"
+                ></div>
             </div>
         </div>
     </div>
