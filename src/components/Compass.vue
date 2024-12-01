@@ -52,7 +52,7 @@
         {
             flag: RS,
             day: 1,
-            done: false,
+            done: true,
             welcomeUrl:   'https://drive.google.com/file/d/1zBCjg7Fz0jRN2Q_bVeFxPyZOqigdQxzK/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/1RwnrXUjjE5rEwnhaNr_KFTiRcFvT5ppb/view',
             symbolUrl: 'https://iili.io/208jbI9.png'
