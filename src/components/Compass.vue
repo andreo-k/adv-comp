@@ -52,7 +52,7 @@
         {
             flag: RS,
             day: 1,
-            done: false,
+            done: true,
             welcomeUrl:   'https://drive.google.com/file/d/1zBCjg7Fz0jRN2Q_bVeFxPyZOqigdQxzK/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/1RwnrXUjjE5rEwnhaNr_KFTiRcFvT5ppb/view',
             symbolUrl: 'https://iili.io/20vj4na.png'
@@ -188,6 +188,10 @@
         window.open(day.done ? day.endOfTaskUrl : day.welcomeUrl, '_blank');
     }
 
+    const clickPrize = (day) => {
+        console.log('!!! prize');
+        window.open(day.symbolUrl, '_blank');
+    }
 
     onMounted(async () => {
         if (!window.DeviceOrientationEvent) {
@@ -238,6 +242,9 @@
                 <div class="compass-indicators__item"></div>
                 <div class="compass-indicators__item"></div>
             </div>
+
+
+
             <div class="compass-flags">
 
                 <div v-for="(day, idx) of days" class="compass-flags__item">
@@ -249,6 +256,21 @@
                 </div>
 
             </div>
+
+            <div class="compass-prizes">
+
+                <div v-for="(day) of days" class="compass-prizes__item">
+                    <div v-if="day.done || true" @click="clickPrize(day)">
+                        <img
+                                :src="day.symbolUrl || 'https://iili.io/20vj4na.png'"
+                        ></img>
+                    </div>
+
+                </div>
+
+            </div>
+
+
             <div class="arrow_wrapper">
                 <div class="compass_arrow"
                      :style="{ transform: `rotateZ(${rotation}deg)` }"
@@ -327,6 +349,125 @@
         background: #3349c9;
         font-size: 35px;
         box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.2), inset 0px 0px 20px 1px rgba(54, 21, 148, 0.3);
+    }
+
+    .compass-prizes {
+        position: absolute;
+        width: 115%;
+        height: 115%;
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+
+    }
+
+    .compass-prizes__item {
+        position: absolute;
+
+        left: calc(50% - 0.05em);
+        top: -0.025em;
+        width: 0.1em;
+        height: 0.066em;
+
+        -webkit-transform-origin: center;
+        transform-origin: center 0.60em;
+
+        z-index: 2;
+        /*background: green;*/
+    }
+
+    .compass-prizes__item:nth-of-type(2) {
+        transform: rotateZ(calc(15deg * 1));
+    }
+
+    .compass-prizes__item:nth-of-type(3) {
+        transform: rotateZ(calc(15deg * 2));
+    }
+
+    .compass-prizes__item:nth-of-type(4) {
+        transform: rotateZ(calc(15deg * 3));
+    }
+
+    .compass-prizes__item:nth-of-type(5) {
+        transform: rotateZ(calc(15deg * 4));
+    }
+
+    .compass-prizes__item:nth-of-type(6) {
+        transform: rotateZ(calc(15deg * 5));
+    }
+
+    .compass-prizes__item:nth-of-type(7) {
+        transform: rotateZ(calc(15deg * 6));
+    }
+
+    .compass-prizes__item:nth-of-type(8) {
+        transform: rotateZ(calc(15deg * 7));
+    }
+
+    .compass-prizes__item:nth-of-type(9) {
+        transform: rotateZ(calc(15deg * 8));
+    }
+
+    .compass-prizes__item:nth-of-type(10) {
+        transform: rotateZ(calc(15deg * 9));
+    }
+
+    .compass-prizes__item:nth-of-type(11) {
+        transform: rotateZ(calc(15deg * 10));
+    }
+
+    .compass-prizes__item:nth-of-type(12) {
+        transform: rotateZ(calc(15deg * 11));
+    }
+
+    .compass-prizes__item:nth-of-type(13) {
+        transform: rotateZ(calc(15deg * 12));
+    }
+
+    .compass-prizes__item:nth-of-type(14) {
+        transform: rotateZ(calc(15deg * 13));
+    }
+
+    .compass-prizes__item:nth-of-type(15) {
+        transform: rotateZ(calc(15deg * 14));
+    }
+
+    .compass-prizes__item:nth-of-type(16) {
+        transform: rotateZ(calc(15deg * 15));
+    }
+
+    .compass-prizes__item:nth-of-type(17) {
+        transform: rotateZ(calc(15deg * 16));
+    }
+
+    .compass-prizes__item:nth-of-type(18) {
+        transform: rotateZ(calc(15deg * 17));
+    }
+
+    .compass-prizes__item:nth-of-type(19) {
+        transform: rotateZ(calc(15deg * 18));
+    }
+
+    .compass-prizes__item:nth-of-type(20) {
+        transform: rotateZ(calc(15deg * 19));
+    }
+
+    .compass-prizes__item:nth-of-type(21) {
+        transform: rotateZ(calc(15deg * 20));
+    }
+
+    .compass-prizes__item:nth-of-type(22) {
+        transform: rotateZ(calc(15deg * 21));
+    }
+
+    .compass-prizes__item:nth-of-type(23) {
+        transform: rotateZ(calc(15deg * 22));
+    }
+
+    .compass-prizes__item:nth-of-type(24) {
+        transform: rotateZ(calc(15deg * 23));
     }
 
     .compass-flags {
