@@ -249,7 +249,7 @@
             <div class="compass-flags">
 
                 <div v-for="(day, idx) of days" class="compass-flags__item">
-                    <div v-if="day.done || day.day == moment().date() && (rotation > idx * 360 / 24 - 15) && (rotation < (idx + 1) * 360 / 24 - 15)"
+                    <div v-if="day.done || day.day == moment().date() && (rotation > idx * 360 / 24 - 7.5) && (rotation < (idx + 1) * 360 / 24 - 7.5)"
                          v-on:click="clickDay(day)"
                     >
                         <div v-html="day.flag">
