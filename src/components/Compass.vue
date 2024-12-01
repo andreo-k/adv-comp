@@ -52,7 +52,7 @@
         {
             flag: RS,
             day: 1,
-            done: true,
+            done: false,
             welcomeUrl:   'https://drive.google.com/file/d/1zBCjg7Fz0jRN2Q_bVeFxPyZOqigdQxzK/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/1RwnrXUjjE5rEwnhaNr_KFTiRcFvT5ppb/view',
             symbolUrl: 'https://iili.io/20vj4na.png'
@@ -185,6 +185,7 @@
     };
 
     const clickDay = (day) => {
+        console.log('!!! day');
         window.open(day.done ? day.endOfTaskUrl : day.welcomeUrl, '_blank');
     }
 
@@ -248,10 +249,12 @@
             <div class="compass-flags">
 
                 <div v-for="(day, idx) of days" class="compass-flags__item">
-                    <div v-if="day.done || day.day == moment().date() && rotation > idx * 360 / 24 && rotation < (idx + 1) * 360 / 24"
-                         @click="clickDay(day)"
-                         v-html="day.flag"
-                    ></div>
+                    <div v-if="day.done || day.day == moment().date() && (rotation > idx * 360 / 24) && (rotation < (idx + 1) * 360 / 24)"
+                         v-on:click="clickDay(day)"
+                    >
+                        <div v-html="day.flag">
+                        </div>
+                    </div>
                     <span v-else class="text-[0.05em] absolute bottom-0 left-[0.8em]">?</span>
                 </div>
 
@@ -260,12 +263,11 @@
             <div class="compass-prizes">
 
                 <div v-for="(day) of days" class="compass-prizes__item">
-                    <div v-if="day.done || true" @click="clickPrize(day)">
+                    <div v-if="day.done" @click="clickPrize(day)">
                         <img
-                                :src="day.symbolUrl || 'https://iili.io/20vj4na.png'"
+                                :src="day.symbolUrl"
                         ></img>
                     </div>
-
                 </div>
 
             </div>
@@ -361,6 +363,7 @@
         transform: translate(-50%, -50%);
         border-radius: 50%;
 
+        z-index: 0;
     }
 
     .compass-prizes__item {
@@ -374,7 +377,7 @@
         -webkit-transform-origin: center;
         transform-origin: center 0.60em;
 
-        z-index: 2;
+        z-index: 0;
         /*background: green;*/
     }
 
@@ -479,6 +482,7 @@
 
         transform: translate(-50%, -50%);
         border-radius: 50%;
+        z-index: 20;
         /*border: solid 1px yellow;*/
     }
 
@@ -493,7 +497,7 @@
         -webkit-transform-origin: center;
         transform-origin: center 0.43em;
 
-        z-index: 2;
+        z-index: 20;
         background: green;
     }
 
