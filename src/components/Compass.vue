@@ -5,6 +5,7 @@
 
     import {US} from 'country-flag-icons/string/3x2'
     import {RS} from 'country-flag-icons/string/3x2'
+    import {GB} from 'country-flag-icons/string/3x2'
 
     let days = [ // 24 days
         {
@@ -70,10 +71,12 @@
             url: 'https://www.yandex.ru'
         },
         {
-            flag: US,
+            flag: GB,
             day: 2,
             done: false,
-            url: 'https://www.yandex.ru'
+            welcomeUrl:   'https://drive.google.com/file/d/1EoBiGHivMs6-O_J73mnjV7aZeXAv359C/view',
+            endOfTaskUrl: 'https://drive.google.com/file/d/18FjT269IqE6hH7nndwd0CQ3Onli57KWr/view',
+            symbolUrl: 'https://iili.io/21uYPqu.png'
         },
         {
             flag: US,
