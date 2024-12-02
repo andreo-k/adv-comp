@@ -6,6 +6,7 @@
     import {US} from 'country-flag-icons/string/3x2'
     import {RS} from 'country-flag-icons/string/3x2'
     import {GB} from 'country-flag-icons/string/3x2'
+    import {TR} from 'country-flag-icons/string/3x2'
 
     let days = [ // 24 days
         {
@@ -73,7 +74,7 @@
         {
             flag: GB,
             day: 2,
-            done: false,
+            done: true,
             welcomeUrl:   'https://drive.google.com/file/d/1EoBiGHivMs6-O_J73mnjV7aZeXAv359C/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/18FjT269IqE6hH7nndwd0CQ3Onli57KWr/view',
             symbolUrl: 'https://iili.io/21uYPqu.png'
@@ -115,10 +116,12 @@
             url: 'https://www.yandex.ru'
         },
         {
-            flag: US,
+            flag: TR,
             day: 3,
             done: false,
-            url: 'https://www.yandex.ru'
+            welcomeUrl: 'https://drive.google.com/file/d/1HnztrFShQ85YqCQcPchDIelnZLuMNwlK/view',
+            endOfTaskUrl: 'https://drive.google.com/file/d/1MQvrZ_0K7sf0IrU8YR5MfKOxM0hUhu1C/view',
+            symbolUrl: 'https://iili.io/21MusXs.png'
         },
         {
             flag: US,
