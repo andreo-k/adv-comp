@@ -118,7 +118,7 @@
         {
             flag: TR,
             day: 3,
-            done: false,
+            done: true,
             welcomeUrl: 'https://drive.google.com/file/d/1HnztrFShQ85YqCQcPchDIelnZLuMNwlK/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/1MQvrZ_0K7sf0IrU8YR5MfKOxM0hUhu1C/view',
             symbolUrl: 'https://iili.io/21MusXs.png'
