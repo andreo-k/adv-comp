@@ -144,7 +144,7 @@
         {
             flag: RU,
             day: 4,
-            done: false,
+            done: true,
             welcomeUrl:   'https://drive.google.com/file/d/1H_D3-1bDQhiaUN3LqE2kMjuR5iePZ29p/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/1b_k_Z3nATJL5rKhtCSooB5RZRJ8bSV7c/view',
             symbolUrl: 'https://iili.io/2EHLXXn.png'
