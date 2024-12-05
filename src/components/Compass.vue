@@ -62,7 +62,7 @@
         {
             flag: NL,
             day: 5,
-            done: false,
+            done: true,
             welcomeUrl:   'https://drive.google.com/file/d/1lO2-g-AWS_l1UhSxmpGw4gZeHn_rTIrj/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/1ypa9Cg3KcnIyvC-IoDGzcsFMWp1_uhau/view',
             symbolUrl: 'https://iili.io/2EEQOXt.png'
