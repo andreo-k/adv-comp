@@ -128,7 +128,7 @@
         {
             flag: DE,
             day: 6,
-            done: false,
+            done: true,
             welcomeUrl: 'https://drive.google.com/file/d/1wdE2kIkCGuycb5xtwvgj5qCcRgUC8SKS/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/14-LIMHRS0TkYx63otuH-IrKBQmHnfwJs/view',
             symbolUrl: 'https://iili.io/2EbZSx2.png'
