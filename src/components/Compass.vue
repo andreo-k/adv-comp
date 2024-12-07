@@ -104,7 +104,7 @@
         {
             flag: CA,
             day: 7,
-            done: false,
+            done: true,
             welcomeUrl: 'https://drive.google.com/file/d/1AWouNy9mSPleg4h1r370_pgkNWvQ5BSn/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/1dAN3YZjQTG8wqpTGTeAXYAS_9bUJeO2X/view',
             symbolUrl: 'https://iili.io/2GaTfLl.png'
