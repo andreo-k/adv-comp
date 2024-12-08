@@ -13,7 +13,9 @@
             flag: US,
             day: 9,
             done: false,
-            url: 'https://www.yandex.ru'
+            welcomeUrl:   'https://drive.google.com/file/d/1CuCl1r1CnJ0kk62pilfAOFWTKxrnQQn9/view',
+            endOfTaskUrl: 'https://drive.google.com/file/d/1ypa9Cg3KcnIyvC-IoDGzcsFMWp1_uhau/view',
+            symbolUrl: 'https://iili.io/2MIJyN9.png'
         },
         {
             flag: KZ,
