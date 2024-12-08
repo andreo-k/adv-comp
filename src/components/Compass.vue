@@ -3,14 +3,14 @@
     import moment from "moment";
     import _ from 'lodash';
 
-    import {DE, NL, RU, US, CA, KZ} from 'country-flag-icons/string/3x2'
+    import {DE, NL, RU, US, CA, KZ, AZ} from 'country-flag-icons/string/3x2'
     import {RS} from 'country-flag-icons/string/3x2'
     import {GB} from 'country-flag-icons/string/3x2'
     import {TR} from 'country-flag-icons/string/3x2'
 
     let days = [ // 24 days
         {
-            flag: US,
+            flag: AZ,
             day: 9,
             done: false,
             welcomeUrl:   'https://drive.google.com/file/d/1CuCl1r1CnJ0kk62pilfAOFWTKxrnQQn9/view',
