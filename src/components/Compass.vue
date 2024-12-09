@@ -20,7 +20,7 @@
         {
             flag: KZ,
             day: 8,
-            done: false,
+            done: true,
             welcomeUrl:   'https://drive.google.com/file/d/1AjK9dnf8d_uCoabSzqzeKHNU_qyV2_2l/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/1-dtK39-Ljtc2CWdQTnAsQmJrhrK-PQd8/view',
             symbolUrl: 'https://iili.io/2GseAWG.png'
