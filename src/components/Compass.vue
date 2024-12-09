@@ -3,9 +3,8 @@
     import moment from "moment";
     import _ from 'lodash';
 
-    import {DE, NL, RU, US, CA, KZ, AZ} from 'country-flag-icons/string/3x2'
+    import {DE, NL, RU, US, CA, KZ, AZ, GB} from 'country-flag-icons/string/3x2'
     import {RS} from 'country-flag-icons/string/3x2'
-    import {GB} from 'country-flag-icons/string/3x2'
     import {TR} from 'country-flag-icons/string/3x2'
 
     let days = [ // 24 days
@@ -92,10 +91,12 @@
             url: 'https://www.yandex.ru'
         },
         {
-            flag: US,
+            flag: GB,
             day: 10,
             done: false,
-            url: 'https://www.yandex.ru'
+            welcomeUrl:   'https://drive.google.com/file/d/11Qu7XA10jSnsl2wdvnZHHjiWRBOw51wc/view',
+            endOfTaskUrl: 'https://drive.google.com/file/d/1wFSmXvIQMaKC7X6rk7C-g6Je0F24cxLd/view',
+            symbolUrl: 'https://iili.io/2Mk7NoJ.png'
         },
         {
             flag: US,
