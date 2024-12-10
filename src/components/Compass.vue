@@ -93,7 +93,7 @@
         {
             flag: GB,
             day: 10,
-            done: false,
+            done: true,
             welcomeUrl:   'https://drive.google.com/file/d/11Qu7XA10jSnsl2wdvnZHHjiWRBOw51wc/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/1wFSmXvIQMaKC7X6rk7C-g6Je0F24cxLd/view',
             symbolUrl: 'https://iili.io/2Mk7NoJ.png'
