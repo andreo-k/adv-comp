@@ -11,7 +11,7 @@
         {
             flag: AZ,
             day: 9,
-            done: false,
+            done: true,
             welcomeUrl:   'https://drive.google.com/file/d/14Jw7A2Y2N22jCGSoapgQcBBTXWn8-6Jj/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/1CuCl1r1CnJ0kk62pilfAOFWTKxrnQQn9/view',
             symbolUrl: 'https://iili.io/2MIJyN9.png'
