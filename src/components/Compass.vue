@@ -165,7 +165,7 @@
         {
             flag: AU,
             day: 12,
-            done: false,
+            done: true,
             welcomeUrl:   'https://drive.google.com/file/d/1thJ_h_T6jPh5sQwo4aDi2zVZleQsiz7D/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/1WgIGTcDl88NtF14LrzuHcIFOjHZem9Zm/view',
             symbolUrl: 'https://iili.io/2VOil2I.png'
