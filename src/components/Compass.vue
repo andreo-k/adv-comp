@@ -4,7 +4,7 @@
     import _ from 'lodash';
 
     import {DE, NL, RU, US, CA, KZ, AZ, GB, CH, AU} from 'country-flag-icons/string/3x2'
-    import {RS} from 'country-flag-icons/string/3x2'
+    import {RS,BY} from 'country-flag-icons/string/3x2'
     import {TR} from 'country-flag-icons/string/3x2'
 
     let days = [ // 24 days
@@ -25,10 +25,12 @@
             symbolUrl: 'https://iili.io/2GseAWG.png'
         },
         {
-            flag: US,
+            flag: BY,
             day: 13,
             done: false,
-            url: 'https://www.yandex.ru'
+            welcomeUrl:   'https://drive.google.com/file/d/1HvIplUqQLQEy8w7fCpHZ05jCbcZmoCGQ/view',
+            endOfTaskUrl: 'https://drive.google.com/file/d/1GZtVr7bScQl4SZyKVFwdUVvSpXIBency/view',
+            symbolUrl: 'https://iili.io/2WNrdKb.png'
         },
         {
             flag: US,
