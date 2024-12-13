@@ -27,7 +27,7 @@
         {
             flag: BY,
             day: 13,
-            done: false,
+            done: true,
             welcomeUrl:   'https://drive.google.com/file/d/1HvIplUqQLQEy8w7fCpHZ05jCbcZmoCGQ/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/1GZtVr7bScQl4SZyKVFwdUVvSpXIBency/view',
             symbolUrl: 'https://iili.io/2WNrdKb.png'
