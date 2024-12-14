@@ -3,7 +3,7 @@
     import moment from "moment";
     import _ from 'lodash';
 
-    import {DE, NL, RU, US, CA, KZ, AZ, GB, CH, AU} from 'country-flag-icons/string/3x2'
+    import {DE, NL, RU, US, CA, KZ, AZ, GB, CH, AU, IE} from 'country-flag-icons/string/3x2'
     import {RS,BY} from 'country-flag-icons/string/3x2'
     import {TR} from 'country-flag-icons/string/3x2'
 
@@ -51,10 +51,12 @@
             url: 'https://www.yandex.ru'
         },
         {
-            flag: US,
+            flag: IE,
             day: 14,
             done: false,
-            url: 'https://www.yandex.ru'
+            welcomeUrl:   'https://drive.google.com/file/d/1RcWfB_ByRy0ONgNodnmO-qLUVFbWCmxp/view',
+            endOfTaskUrl: 'https://drive.google.com/file/d/1XWo-GfTPc41vbD9zl7WVaQeArXG4EYKg/view',
+            symbolUrl: 'https://iili.io/2Xu5wdl.png'
         },
         {
             flag: RS,
