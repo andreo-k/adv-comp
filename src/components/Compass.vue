@@ -4,7 +4,7 @@
     import _ from 'lodash';
 
     import {DE, NL, RU, US, CA, KZ, AZ, GB, CH, AU, IE} from 'country-flag-icons/string/3x2'
-    import {RS,BY} from 'country-flag-icons/string/3x2'
+    import {RS,BY, AT} from 'country-flag-icons/string/3x2'
     import {TR} from 'country-flag-icons/string/3x2'
 
     let days = [ // 24 days
