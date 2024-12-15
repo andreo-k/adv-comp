@@ -103,10 +103,12 @@
             symbolUrl: 'https://iili.io/2Mk7NoJ.png'
         },
         {
-            flag: US,
+            flag: AT,
             day: 15,
             done: false,
-            url: 'https://www.yandex.ru'
+            welcomeUrl:   'https://drive.google.com/file/d/1p7BLe5a8Am4og_N-PyatLuBTWI8EMfWP/view',
+            endOfTaskUrl: 'https://drive.google.com/file/d/1W2PO6wBbToGOYtUAbS5pFtmiHlta1bLq/view',
+            symbolUrl: 'https://iili.io/2XwQICg.png'
         },
         {
             flag: CA,
