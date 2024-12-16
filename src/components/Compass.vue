@@ -53,7 +53,7 @@
         {
             flag: IE,
             day: 14,
-            done: false,
+            done: true,
             welcomeUrl:   'https://drive.google.com/file/d/1RcWfB_ByRy0ONgNodnmO-qLUVFbWCmxp/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/1XWo-GfTPc41vbD9zl7WVaQeArXG4EYKg/view',
             symbolUrl: 'https://iili.io/2Xu5wdl.png'
@@ -105,7 +105,7 @@
         {
             flag: AT,
             day: 15,
-            done: false,
+            done: true,
             welcomeUrl:   'https://drive.google.com/file/d/1p7BLe5a8Am4og_N-PyatLuBTWI8EMfWP/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/1W2PO6wBbToGOYtUAbS5pFtmiHlta1bLq/view',
             symbolUrl: 'https://iili.io/2XwQICg.png'
@@ -121,7 +121,7 @@
         {
             flag: BA,
             day: 16,
-            done: false,
+            done: true,
             welcomeUrl: 'https://drive.google.com/file/d/191OMIdkBJ9_2l5Z716nWzgjpxEKGVokn/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/199ljjEMVFciQLfa0JkEl6c3bWCe8dk9g/view',
             symbolUrl: 'https://iili.io/2h0oBna.png'
