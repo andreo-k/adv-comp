@@ -160,7 +160,9 @@
             flag: US,
             day: 17,
             done: false,
-            url: 'https://www.yandex.ru'
+            welcomeUrl:   'https://drive.google.com/file/d/1o_UUen3kuNLNl64txDYQb0sN661xZAFG/view',
+            endOfTaskUrl: 'https://drive.google.com/file/d/1R05y2X4F8GJM4yN3imgJF_WONN2eLsG7/view',
+            symbolUrl: 'https://iili.io/2hp4Op2.png'
         },
         {
             flag: RU,
