@@ -77,10 +77,12 @@
             symbolUrl: 'https://iili.io/2EEQOXt.png'
         },
         {
-            flag: US,
+            flag: RU,
             day: 19,
             done: false,
-            url: 'https://www.yandex.ru'
+            welcomeUrl:   'https://drive.google.com/file/d/1FeXdb8owfj95coT3q-rRXRxAQ0F4TXfw/view',
+            endOfTaskUrl: 'https://drive.google.com/file/d/1BsHXzTq2chFyyZA3mOkxaokvP88fmajT/view',
+            symbolUrl: 'https://iili.io/2wsEZKv.png'
         },
         {
             flag: GB,
