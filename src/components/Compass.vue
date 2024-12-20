@@ -98,7 +98,7 @@
             done: false,
             welcomeUrl:   'https://drive.google.com/file/d/1DyPtaIdeL0XwdH7hegFmoKl5rlAShFh6/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/1zTFTTq8XlJg5MRt2ITxwdocSFpM3xLss/view',
-            symbolUrl: 'https://iili.io/21uYPqu.png'
+            symbolUrl: 'https://iili.io/2NuMKxt.png'
         },
         {
             flag: GB,
