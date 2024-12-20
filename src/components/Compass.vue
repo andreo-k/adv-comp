@@ -93,10 +93,12 @@
             symbolUrl: 'https://iili.io/21uYPqu.png'
         },
         {
-            flag: US,
+            flag: TR,
             day: 20,
             done: false,
-            url: 'https://www.yandex.ru'
+            welcomeUrl:   'https://drive.google.com/file/d/1DyPtaIdeL0XwdH7hegFmoKl5rlAShFh6/view',
+            endOfTaskUrl: 'https://drive.google.com/file/d/1zTFTTq8XlJg5MRt2ITxwdocSFpM3xLss/view',
+            symbolUrl: 'https://iili.io/21uYPqu.png'
         },
         {
             flag: GB,
