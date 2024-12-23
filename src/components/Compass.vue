@@ -3,7 +3,7 @@
     import moment from "moment";
     import _ from 'lodash';
 
-    import {DE, NL, RU, US, CA, KZ, AZ, GB, CH, AU, IE, BA, ME, IN} from 'country-flag-icons/string/3x2'
+    import {DE, NL, RU, US, CA, KZ, AZ, GB, CH, AU, IE, BA, ME, IN, CN} from 'country-flag-icons/string/3x2'
     import {RS,BY, AT} from 'country-flag-icons/string/3x2'
     import {TR} from 'country-flag-icons/string/3x2'
 
@@ -50,7 +50,9 @@
             flag: US,
             day: 22,
             done: false,
-            url: 'https://www.yandex.ru'
+            welcomeUrl:   'https://drive.google.com/file/d/1RcWfB_ByRy0ONgNodnmO-qLUVFbWCmxp/view',
+            endOfTaskUrl: 'https://drive.google.com/file/d/1KW0MSudbnp_OfFOAh5MDbNfXKAijlPMq/view',
+            symbolUrl: 'https://iili.io/2OV5K8J.png'
         },
         {
             flag: IE,
@@ -161,8 +163,8 @@
             day: 21,
             done: false,
             welcomeUrl: 'https://drive.google.com/file/d/1X6W_nOdkRO3wGnNlRYmUA3mYj7sHENG0/view',
-            endOfTaskUrl: 'https://drive.google.com/file/d/14-LIMHRS0TkYx63otuH-IrKBQmHnfwJs/view',
-            symbolUrl: 'https://iili.io/2EbZSx2.png'
+            endOfTaskUrl: 'https://drive.google.com/file/d/1JsihuyV3letDEZaPKSQYErvJeeQYYNZh/view',
+            symbolUrl: 'https://iili.io/2OVIjUv.png'
         },
         {
             flag: US,
@@ -189,10 +191,12 @@
             symbolUrl: 'https://iili.io/2VOil2I.png'
         },
         {
-            flag: US,
+            flag: CN,
             day: 23,
             done: false,
-            url: 'https://www.yandex.ru'
+            welcomeUrl:   'https://drive.google.com/file/d/1AuNLUCHzPo4sHODKLcP_ypeDrIomA7bO/view',
+            endOfTaskUrl: 'https://drive.google.com/file/d/1_aymVPuRtwVr4zphbxsdYmKlZgjYulE3/view',
+            symbolUrl: 'https://iili.io/2OVbDwN.png'
         },
 
 
