@@ -41,10 +41,12 @@
             symbolUrl: 'https://iili.io/2jiHXDu.png'
         },
         {
-            flag: US,
+            flag: RS,
             day: 24,
             done: false,
-            url: 'https://www.yandex.ru'
+            welcomeUrl:   'https://drive.google.com/file/d/1qGmojv6wDrT33-CIcV_lpVuB8nNzmT5N/view',
+            endOfTaskUrl: 'https://drive.google.com/file/d/1gG6vb6XeU-ZXs2KfYXUKDC1cBjsrCOmX/view',
+            symbolUrl: 'https://iili.io/2OPoEBt.png'
         },
         {
             flag: US,
@@ -193,7 +195,7 @@
         {
             flag: CN,
             day: 23,
-            done: false,
+            done: true,
             welcomeUrl:   'https://drive.google.com/file/d/1AuNLUCHzPo4sHODKLcP_ypeDrIomA7bO/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/1_aymVPuRtwVr4zphbxsdYmKlZgjYulE3/view',
             symbolUrl: 'https://iili.io/2OVbDwN.png'
