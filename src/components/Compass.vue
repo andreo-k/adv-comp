@@ -51,7 +51,7 @@
         {
             flag: US,
             day: 22,
-            done: false,
+            done: true,
             welcomeUrl:   'https://drive.google.com/file/d/1RcWfB_ByRy0ONgNodnmO-qLUVFbWCmxp/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/1KW0MSudbnp_OfFOAh5MDbNfXKAijlPMq/view',
             symbolUrl: 'https://iili.io/2OV5K8J.png'
