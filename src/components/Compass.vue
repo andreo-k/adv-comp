@@ -35,7 +35,7 @@
         {
             flag: ME,
             day: 18,
-            done: false,
+            done: true,
             welcomeUrl:   'https://drive.google.com/file/d/1zWKW_YAl6bJIWhNbs5QbJ8zxkX_4vBbq/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/1jxdREH2pRmPCcYWLvwxVqpV6m2w2VOUu/view',
             symbolUrl: 'https://iili.io/2jiHXDu.png'
@@ -43,7 +43,7 @@
         {
             flag: RS,
             day: 24,
-            done: false,
+            done: true,
             welcomeUrl:   'https://drive.google.com/file/d/1qGmojv6wDrT33-CIcV_lpVuB8nNzmT5N/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/1gG6vb6XeU-ZXs2KfYXUKDC1cBjsrCOmX/view',
             symbolUrl: 'https://iili.io/2OPoEBt.png'
@@ -163,7 +163,7 @@
         {
             flag: IN,
             day: 21,
-            done: false,
+            done: true,
             welcomeUrl: 'https://drive.google.com/file/d/1X6W_nOdkRO3wGnNlRYmUA3mYj7sHENG0/view',
             endOfTaskUrl: 'https://drive.google.com/file/d/1JsihuyV3letDEZaPKSQYErvJeeQYYNZh/view',
             symbolUrl: 'https://iili.io/2OVIjUv.png'
